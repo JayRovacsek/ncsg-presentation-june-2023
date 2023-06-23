@@ -30,7 +30,7 @@
         inherit (gitignore.lib) gitignoreSource;
       in {
         checks.pre-commit = self.inputs.pre-commit-hooks.lib.${system}.run {
-          src = gitignoreSource ./.;
+          src = gitignoreSource self;
           hooks = {
             # Builtin hooks
             deadnix.enable = true;
