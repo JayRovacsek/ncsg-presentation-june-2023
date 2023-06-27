@@ -1,0 +1,34 @@
+[
+    {
+        "name": "flex-2.6.4",
+        "pname": "flex",
+        "version": "2.6.4",
+        "derivation": "/nix/store/fyailvwra18kghzaw1fqhmswi6nf8hk3-flex-2.6.4.drv",
+        "affected_by": [
+            "CVE-2019-6293"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-6293": 5.5
+        },
+        "description": {
+            "CVE-2019-6293": "An issue was discovered in the function mark_beginning_as_normal in nfa.c in flex 2.6.4. There is a stack exhaustion problem caused by the mark_beginning_as_normal function making recursive calls to itself in certain scenarios involving lots of '*' characters. Remote attackers could leverage this vulnerability to cause a denial-of-service."
+        }
+    },
+    {
+        "name": "patch-2.7.6",
+        "pname": "patch",
+        "version": "2.7.6",
+        "derivation": "/nix/store/qv4366kcvbazwb4fkgljldlcmr7a74qn-patch-2.7.6.drv",
+        "affected_by": [
+            "CVE-2019-20633"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-20633": 5.5
+        },
+        "description": {
+            "CVE-2019-20633": "GNU patch through 2.7.6 contains a free(p_line[p_end]) Double Free vulnerability in the function another_hunk in pch.c that can cause a denial of service via a crafted patch file. NOTE: this issue exists because of an incomplete fix for CVE-2018-6952."
+        }
+    }
+]

@@ -1,0 +1,357 @@
+[
+    {
+        "name": "bind-9.18.14",
+        "pname": "bind",
+        "version": "9.18.14",
+        "derivation": "/nix/store/588gkpcgm4kcsi5m2gvdz4n3aa31l661-bind-9.18.14.drv",
+        "affected_by": [
+            "CVE-2019-6470"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-6470": 7.5
+        },
+        "description": {
+            "CVE-2019-6470": "There had existed in one of the ISC BIND libraries a bug in a function that was used by dhcpd when operating in DHCPv6 mode. There was also a bug in dhcpd relating to the use of this function per its documentation, but the bug in the library function prevented this from causing any harm. All releases of dhcpd from ISC contain copies of this, and other, BIND libraries in combinations that have been tested prior to release and are known to not present issues like this. Some third-party packagers of ISC software have modified the dhcpd source, BIND source, or version matchup in ways that create the crash potential. Based on reports available to ISC, the crash probability is large and no analysis has been done on how, or even if, the probability can be manipulated by an attacker. Affects: Builds of dhcpd versions prior to version 4.4.1 when using BIND versions 9.11.2 or later, or BIND versions with specific bug fixes backported to them. ISC does not have access to comprehensive version lists for all repackagings of dhcpd that are vulnerable. In particular, builds from other vendors may also be affected. Operators are advised to consult their vendor documentation."
+        }
+    },
+    {
+        "name": "dbus-1",
+        "pname": "dbus",
+        "version": "1",
+        "derivation": "/nix/store/sw9jb6jsdsdzk314d5wqb8mv30z9b2z2-dbus-1.drv",
+        "affected_by": [
+            "CVE-2019-12749"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-12749": 7.1
+        },
+        "description": {
+            "CVE-2019-12749": "dbus before 1.10.28, 1.12.x before 1.12.16, and 1.13.x before 1.13.12, as used in DBusServer in Canonical Upstart in Ubuntu 14.04 (and in some, less common, uses of dbus-daemon), allows cookie spoofing because of symlink mishandling in the reference implementation of DBUS_COOKIE_SHA1 in the libdbus library. (This only affects the DBUS_COOKIE_SHA1 authentication mechanism.) A malicious client with write access to its own home directory could manipulate a ~/.dbus-keyrings symlink to cause a DBusServer with a different uid to read and write in unintended locations. In the worst case, this could result in the DBusServer reusing a cookie that is known to the malicious client, and treating that cookie as evidence that a subsequent client connection came from an attacker-chosen uid, allowing authentication bypass."
+        }
+    },
+    {
+        "name": "erofs-utils-1.6",
+        "pname": "erofs-utils",
+        "version": "1.6",
+        "derivation": "/nix/store/22m0krqwc7jrs5d7dk3x9m6fpxb5q6ym-erofs-utils-1.6.drv",
+        "affected_by": [
+            "CVE-2023-33551",
+            "CVE-2023-33552"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2023-33551": 7.8,
+            "CVE-2023-33552": 7.8
+        },
+        "description": {
+            "CVE-2023-33551": "Heap Buffer Overflow in the erofsfsck_dirent_iter function in fsck/main.c in erofs-utils v1.6 allows remote attackers to execute arbitrary code via a crafted erofs filesystem image.",
+            "CVE-2023-33552": "Heap Buffer Overflow in the erofs_read_one_data function at data.c in erofs-utils v1.6 allows remote attackers to execute arbitrary code via a crafted erofs filesystem image."
+        }
+    },
+    {
+        "name": "flex-2.6.4",
+        "pname": "flex",
+        "version": "2.6.4",
+        "derivation": "/nix/store/fyailvwra18kghzaw1fqhmswi6nf8hk3-flex-2.6.4.drv",
+        "affected_by": [
+            "CVE-2019-6293"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-6293": 5.5
+        },
+        "description": {
+            "CVE-2019-6293": "An issue was discovered in the function mark_beginning_as_normal in nfa.c in flex 2.6.4. There is a stack exhaustion problem caused by the mark_beginning_as_normal function making recursive calls to itself in certain scenarios involving lots of '*' characters. Remote attackers could leverage this vulnerability to cause a denial-of-service."
+        }
+    },
+    {
+        "name": "fuse-2.9.9",
+        "pname": "fuse",
+        "version": "2.9.9",
+        "derivation": "/nix/store/76sry0znp88sc2fb43f9rs4y5f7qmgzb-fuse-2.9.9.drv",
+        "affected_by": [
+            "CVE-2019-14860",
+            "CVE-2019-14900"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-14860": 6.5,
+            "CVE-2019-14900": 6.5
+        },
+        "description": {
+            "CVE-2019-14860": "It was found that the Syndesis configuration for Cross-Origin Resource Sharing was set to allow all origins. An attacker could use this lack of protection to conduct phishing attacks and further access unauthorized information.",
+            "CVE-2019-14900": "A flaw was found in Hibernate ORM in versions before 5.3.18, 5.4.18 and 5.5.0.Beta1. A SQL injection in the implementation of the JPA Criteria API can permit unsanitized literals when a literal is used in the SELECT or GROUP BY parts of the query. This flaw could allow an attacker to access unauthorized information or possibly conduct further attacks."
+        }
+    },
+    {
+        "name": "fuse-2.9.9-closefrom-glibc-2-34.patch?id=8a970396fca7aca2d5a761b8e7a8242f1eef14c9",
+        "pname": "fuse",
+        "version": "2.9.9-closefrom-glibc-2-34.patch?id=8a970396fca7aca2d5a761b8e7a8242f1eef14c9",
+        "derivation": "/nix/store/qvb5iij3qq22kr4bdd6p4g61p4ca5x98-fuse-2.9.9-closefrom-glibc-2-34.patch?id=8a970396fca7aca2d5a761b8e7a8242f1eef14c9.drv",
+        "affected_by": [
+            "CVE-2019-14860",
+            "CVE-2019-14900"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-14860": 6.5,
+            "CVE-2019-14900": 6.5
+        },
+        "description": {
+            "CVE-2019-14860": "It was found that the Syndesis configuration for Cross-Origin Resource Sharing was set to allow all origins. An attacker could use this lack of protection to conduct phishing attacks and further access unauthorized information.",
+            "CVE-2019-14900": "A flaw was found in Hibernate ORM in versions before 5.3.18, 5.4.18 and 5.5.0.Beta1. A SQL injection in the implementation of the JPA Criteria API can permit unsanitized literals when a literal is used in the SELECT or GROUP BY parts of the query. This flaw could allow an attacker to access unauthorized information or possibly conduct further attacks."
+        }
+    },
+    {
+        "name": "fuse-3.11.0",
+        "pname": "fuse",
+        "version": "3.11.0",
+        "derivation": "/nix/store/2bnkqxjn07dzs2xpw0mw4wg183frmj48-fuse-3.11.0.drv",
+        "affected_by": [
+            "CVE-2019-14860",
+            "CVE-2019-14900"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-14860": 6.5,
+            "CVE-2019-14900": 6.5
+        },
+        "description": {
+            "CVE-2019-14860": "It was found that the Syndesis configuration for Cross-Origin Resource Sharing was set to allow all origins. An attacker could use this lack of protection to conduct phishing attacks and further access unauthorized information.",
+            "CVE-2019-14900": "A flaw was found in Hibernate ORM in versions before 5.3.18, 5.4.18 and 5.5.0.Beta1. A SQL injection in the implementation of the JPA Criteria API can permit unsanitized literals when a literal is used in the SELECT or GROUP BY parts of the query. This flaw could allow an attacker to access unauthorized information or possibly conduct further attacks."
+        }
+    },
+    {
+        "name": "git-2.41.0",
+        "pname": "git",
+        "version": "2.41.0",
+        "derivation": "/nix/store/c3hsw3aq0w03wylvmmjaskzw6vbid0k1-git-2.41.0.drv",
+        "affected_by": [
+            "CVE-2018-1000110",
+            "CVE-2018-1000182",
+            "CVE-2019-1003010",
+            "CVE-2020-2136",
+            "CVE-2021-21684",
+            "CVE-2022-30947",
+            "CVE-2022-30948",
+            "CVE-2022-30949",
+            "CVE-2022-36882",
+            "CVE-2022-36883",
+            "CVE-2022-36884",
+            "CVE-2022-38663"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2022-30948": 7.5,
+            "CVE-2022-36883": 7.5,
+            "CVE-2018-1000182": 6.4,
+            "CVE-2021-21684": 6.1,
+            "CVE-2022-38663": 6.5,
+            "CVE-2019-1003010": 4.3,
+            "CVE-2020-2136": 5.4,
+            "CVE-2022-36882": 8.8,
+            "CVE-2018-1000110": 5.3,
+            "CVE-2022-30949": 5.3,
+            "CVE-2022-30947": 7.5,
+            "CVE-2022-36884": 5.3
+        },
+        "description": {
+            "CVE-2022-30948": "Jenkins Mercurial Plugin 2.16 and earlier allows attackers able to configure pipelines to check out some SCM repositories stored on the Jenkins controller's file system using local paths as SCM URLs, obtaining limited information about other projects' SCM contents.",
+            "CVE-2022-36883": "A missing permission check in Jenkins Git Plugin 4.11.3 and earlier allows unauthenticated attackers to trigger builds of jobs configured to use an attacker-specified Git repository and to cause them to check out an attacker-specified commit.",
+            "CVE-2018-1000182": "A server-side request forgery vulnerability exists in Jenkins Git Plugin 3.9.0 and older in AssemblaWeb.java, GitBlitRepositoryBrowser.java, Gitiles.java, TFS2013GitRepositoryBrowser.java, ViewGitWeb.java that allows attackers with Overall/Read access to cause Jenkins to send a GET request to a specified URL.",
+            "CVE-2021-21684": "Jenkins Git Plugin 4.8.2 and earlier does not escape the Git SHA-1 checksum parameters provided to commit notifications when displaying them in a build cause, resulting in a stored cross-site scripting (XSS) vulnerability.",
+            "CVE-2022-38663": "Jenkins Git Plugin 4.11.4 and earlier does not properly mask (i.e., replace with asterisks) credentials in the build log provided by the Git Username and Password (`gitUsernamePassword`) credentials binding.",
+            "CVE-2019-1003010": "A cross-site request forgery vulnerability exists in Jenkins Git Plugin 3.9.1 and earlier in src/main/java/hudson/plugins/git/GitTagAction.java that allows attackers to create a Git tag in a workspace and attach corresponding metadata to a build record.",
+            "CVE-2020-2136": "Jenkins Git Plugin 4.2.0 and earlier does not escape the error message for the repository URL for Microsoft TFS field form validation, resulting in a stored cross-site scripting vulnerability.",
+            "CVE-2022-36882": "A cross-site request forgery (CSRF) vulnerability in Jenkins Git Plugin 4.11.3 and earlier allows attackers to trigger builds of jobs configured to use an attacker-specified Git repository and to cause them to check out an attacker-specified commit.",
+            "CVE-2018-1000110": "An improper authorization vulnerability exists in Jenkins Git Plugin version 3.7.0 and earlier in GitStatus.java that allows an attacker with network access to obtain a list of nodes and users.",
+            "CVE-2022-30949": "Jenkins REPO Plugin 1.14.0 and earlier allows attackers able to configure pipelines to check out some SCM repositories stored on the Jenkins controller's file system using local paths as SCM URLs, obtaining limited information about other projects' SCM contents.",
+            "CVE-2022-30947": "Jenkins Git Plugin 4.11.1 and earlier allows attackers able to configure pipelines to check out some SCM repositories stored on the Jenkins controller's file system using local paths as SCM URLs, obtaining limited information about other projects' SCM contents.",
+            "CVE-2022-36884": "The webhook endpoint in Jenkins Git Plugin 4.11.3 and earlier provide unauthenticated attackers information about the existence of jobs configured to use an attacker-specified Git repository."
+        }
+    },
+    {
+        "name": "libarchive-3.6.2",
+        "pname": "libarchive",
+        "version": "3.6.2",
+        "derivation": "/nix/store/x7phvvwmq1jxr39p4b4gdn97flc94ccn-libarchive-3.6.2.drv",
+        "affected_by": [
+            "CVE-2023-30571"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2023-30571": 5.3
+        },
+        "description": {
+            "CVE-2023-30571": "Libarchive through 3.6.2 can cause directories to have world-writable permissions. The umask() call inside archive_write_disk_posix.c changes the umask of the whole process for a very short period of time; a race condition with another thread can lead to a permanent umask 0 setting. Such a race condition could lead to implicit directory creation with permissions 0777 (without the sticky bit), which means that any low-privileged local user can delete and rename files inside those directories."
+        }
+    },
+    {
+        "name": "libjpeg-turbo-2.1.5.1",
+        "pname": "libjpeg-turbo",
+        "version": "2.1.5.1",
+        "derivation": "/nix/store/z027mznx7509djcz80sp9nnn4xq9kh65-libjpeg-turbo-2.1.5.1.drv",
+        "affected_by": [
+            "CVE-2023-2804"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2023-2804": 6.5
+        },
+        "description": {
+            "CVE-2023-2804": "A heap-based buffer overflow issue was discovered in libjpeg-turbo in h2v2_merged_upsample_internal() function of jdmrgext.c file. The vulnerability can only be exploited with 12-bit data precision for which the range of the sample data type exceeds the valid sample range, hence, an attacker could craft a 12-bit lossless JPEG image that contains out-of-range 12-bit samples. An application attempting to decompress such image using merged upsampling would lead to segmentation fault or buffer overflows, causing an application to crash."
+        }
+    },
+    {
+        "name": "libtiff-4.5.0",
+        "pname": "libtiff",
+        "version": "4.5.0",
+        "derivation": "/nix/store/785aksfr8zr69znncln3k2bz7dfjy4w0-libtiff-4.5.0.drv",
+        "affected_by": [
+            "CVE-2023-1916",
+            "CVE-2023-25434",
+            "CVE-2023-26965"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2023-25434": 8.8,
+            "CVE-2023-1916": 6.1,
+            "CVE-2023-26965": 8.8
+        },
+        "description": {
+            "CVE-2023-25434": "libtiff 4.5.0 is vulnerable to Buffer Overflow via extractContigSamplesBytes() at /libtiff/tools/tiffcrop.c:3215.",
+            "CVE-2023-1916": "A flaw was found in tiffcrop, a program distributed by the libtiff package. A specially crafted tiff file can lead to an out-of-bounds read in the extractImageSection function in tools/tiffcrop.c, resulting in a denial of service and limited information disclosure. This issue affects libtiff versions 4.x.",
+            "CVE-2023-26965": "loadImage() in tools/tiffcrop.c in LibTIFF through 4.5.0 has a heap-based use after free via a crafted TIFF image."
+        }
+    },
+    {
+        "name": "linux-pam-1.5.2",
+        "pname": "linux-pam",
+        "version": "1.5.2",
+        "derivation": "/nix/store/fnx8akvk6dfk85s802nn0hsnkmw9gm45-linux-pam-1.5.2.drv",
+        "affected_by": [
+            "CVE-2022-28321"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2022-28321": 9.8
+        },
+        "description": {
+            "CVE-2022-28321": "The Linux-PAM package before 1.5.2-6.1 for openSUSE Tumbleweed allows authentication bypass for SSH logins. The pam_access.so module doesn't correctly restrict login if a user tries to connect from an IP address that is not resolvable via DNS. In such conditions, a user with denied access to a machine can still get access. NOTE: the relevance of this issue is largely limited to openSUSE Tumbleweed and openSUSE Factory; it does not affect Linux-PAM upstream."
+        }
+    },
+    {
+        "name": "ninja-1.11.1",
+        "pname": "ninja",
+        "version": "1.11.1",
+        "derivation": "/nix/store/4ll565p014nhqk6cklapiy2w2arj1p11-ninja-1.11.1.drv",
+        "affected_by": [
+            "CVE-2021-4336"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2021-4336": 9.8
+        },
+        "description": {
+            "CVE-2021-4336": "A vulnerability was found in ITRS Group monitor-ninja up to 2021.11.1. It has been rated as critical. Affected by this issue is some unknown functionality of the file modules/reports/models/scheduled_reports.php. The manipulation leads to sql injection. Upgrading to version 2021.11.30 is able to address this issue. The name of the patch is 6da9080faec9bca1ca5342386c0421dca0a6c0cc. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-230084."
+        }
+    },
+    {
+        "name": "patch-2.7.6",
+        "pname": "patch",
+        "version": "2.7.6",
+        "derivation": "/nix/store/qv4366kcvbazwb4fkgljldlcmr7a74qn-patch-2.7.6.drv",
+        "affected_by": [
+            "CVE-2019-20633"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2019-20633": 5.5
+        },
+        "description": {
+            "CVE-2019-20633": "GNU patch through 2.7.6 contains a free(p_line[p_end]) Double Free vulnerability in the function another_hunk in pch.c that can cause a denial of service via a crafted patch file. NOTE: this issue exists because of an incomplete fix for CVE-2018-6952."
+        }
+    },
+    {
+        "name": "perl-5.36.0",
+        "pname": "perl",
+        "version": "5.36.0",
+        "derivation": "/nix/store/vg94lwbyhxl9icx25wfhxh86aali6nd8-perl-5.36.0.drv",
+        "affected_by": [
+            "CVE-2023-31486"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2023-31486": 8.1
+        },
+        "description": {
+            "CVE-2023-31486": "HTTP::Tiny before 0.083, a Perl core module since 5.13.9 and available standalone on CPAN, has an insecure default TLS configuration where users must opt in to verify certificates."
+        }
+    },
+    {
+        "name": "perl-5.36.0-env",
+        "pname": "perl",
+        "version": "5.36.0-env",
+        "derivation": "/nix/store/laihwvwwa5mr0npnika86sx0kzbffsbp-perl-5.36.0-env.drv",
+        "affected_by": [
+            "CVE-2023-31486"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2023-31486": 8.1
+        },
+        "description": {
+            "CVE-2023-31486": "HTTP::Tiny before 0.083, a Perl core module since 5.13.9 and available standalone on CPAN, has an insecure default TLS configuration where users must opt in to verify certificates."
+        }
+    },
+    {
+        "name": "quote-1.0.20",
+        "pname": "quote",
+        "version": "1.0.20",
+        "derivation": "/nix/store/vcv01pw92jm0v334p33hamv2qdg4xrwg-quote-1.0.20.drv",
+        "affected_by": [
+            "CVE-2020-16194"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2020-16194": 5.3
+        },
+        "description": {
+            "CVE-2020-16194": "An Insecure Direct Object Reference (IDOR) vulnerability was found in Prestashop Opart devis < 4.0.2. Unauthenticated attackers can have access to any user's invoice and delivery address by exploiting an IDOR on the delivery_address and invoice_address fields."
+        }
+    },
+    {
+        "name": "shadow-4.13",
+        "pname": "shadow",
+        "version": "4.13",
+        "derivation": "/nix/store/0dim1z7hlh6zhag17440vrk22zfz4myx-shadow-4.13.drv",
+        "affected_by": [
+            "CVE-2023-29383"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2023-29383": 3.3
+        },
+        "description": {
+            "CVE-2023-29383": "In Shadow 4.13, it is possible to inject control characters into fields provided to the SUID program chfn (change finger). Although it is not possible to exploit this directly (e.g., adding a new user fails because \\n is in the block list), it is possible to misrepresent the /etc/passwd file when viewed. Use of \\r manipulations and Unicode characters to work around blocking of the : character make it possible to give the impression that a new user has been added. In other words, an adversary may be able to convince a system administrator to take the system offline (an indirect, social-engineered denial of service) by demonstrating that \"cat /etc/passwd\" shows a rogue user account."
+        }
+    },
+    {
+        "name": "unzip-6.0",
+        "pname": "unzip",
+        "version": "6.0",
+        "derivation": "/nix/store/pg4sibzpxfd9ybl020cr4shpz0ys2nhh-unzip-6.0.drv",
+        "affected_by": [
+            "CVE-2021-4217"
+        ],
+        "whitelisted": [],
+        "cvssv3_basescore": {
+            "CVE-2021-4217": 3.3
+        },
+        "description": {
+            "CVE-2021-4217": "A flaw was found in unzip. The vulnerability occurs due to improper handling of Unicode strings, which can lead to a null pointer dereference. This flaw allows an attacker to input a specially crafted zip file, leading to a crash or code execution."
+        }
+    }
+]
