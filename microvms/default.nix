@@ -12,7 +12,7 @@ in builtins.foldl' (accumulator: system:
     {
       "node-${hypervisor}-microvm-${system}" = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [
+        modules = node-microvm-modules ++ [
           microvm.nixosModules.microvm
           {
             microvm = {
@@ -21,7 +21,6 @@ in builtins.foldl' (accumulator: system:
               mem = 512;
             };
           }
-          node-microvm-modules
         ];
       };
     } // acc) { } hypervisors) // accumulator) {
