@@ -572,9 +572,9 @@ docker pull node@sha256:82bcf77a5de631c6b19f4449ccec82bfbb7d8f6c94d6ae3bdf760ed6
 
 ---
 
-Otherwise package.lock v3 will get you
+Otherwise package.json v3 will get you
 
-![package-lock-v3](images/package-lock-v3.gif)
+![package.json](images/package-lock-v3.gif)
 
 ---
 
