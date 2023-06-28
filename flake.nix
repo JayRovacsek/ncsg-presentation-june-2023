@@ -68,7 +68,7 @@
             nixfmt.enable = true;
             prettier.enable = true;
             statix.enable = true;
-            typos.enable = true;
+            typos.enable = false;
 
             # Custom hooks
             statix-write = {

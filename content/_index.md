@@ -297,6 +297,8 @@ azure, do, docker, gce, hyperv, install-iso, install-iso-hyperv, iso, kubevirt, 
 
 ---
 
+When you're defining a workload as code - building for alternate image types
+
 ![free-realestate](images/free-realestate.jpg)
 
 ---
@@ -522,7 +524,7 @@ for this one neat little trick
 my-cool-repo/dockerfile
 
 ```yaml
-ADD
+ADD X
 ```
 
 ---
@@ -534,14 +536,6 @@ Anyone know the difference between `ADD` and `COPY`?
 ADD allows the source to be a _*URL*_
 
 I hope we're doing validation of the artefact 😈
-
----
-
-TODO:
-
-Leaking sensitive information into a container
-Volume mounts are great - but including sensitive data could give an adversary
-a vector to attack other hosts (ssh keys/passwd)
 
 ---
 
@@ -596,8 +590,41 @@ Shares can be mutable but the base image should not be
 
 ## Verdict: Stability of Images
 
-TODO
+So this is again, a case of you get what you give.
+
+Docker can be trivially pinned, but generally isn't
+
+MicroVMs are by default, but cause friction in the update process
 
 ---
 
-TODO: Recap
+## Recap
+
+- Apply runtime limits
+- Adopt a minimalist approach for asset deployment
+- Applied minimal permissions for both the service and runtime user
+- Don't add capabilities to instances without understanding what they do
+- Don't utilise ADD either directly or transitively if you can
+- Pin images if suitable
+
+---
+
+## Recap
+
+MicroVM or Docker - it doesn't matter if you utilise good practices.
+
+---
+
+MicroVMs though - _so hot right now_
+
+![zoolander](images/zoolander.gif)
+
+---
+
+Questions?
+
+---
+
+Thank you! 🥰
+
+---
